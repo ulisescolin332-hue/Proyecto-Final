@@ -6,7 +6,7 @@ Proyecto final, Exámen No. 2*/
 // Prototipo de la funcion (una por cada inciso)
 void In1CapturadeVotos ();          					            // Inciso 1: Lectura y almacenamiento
 void In2CalculodeVotos ();          					            // Inciso 2: Cálculo de votos y lugares de la canción
-void In3ObtdeOyenGanyMostrarResultados ();                // Inciso 3: Obtención del oyente ganador y resultados
+void In3ObtdeOyenGanyMostrarResultados ();                          // Inciso 3: Obtención del oyente ganador y resultados
 
 // Variables globales
 int CancionNo1 = 0;          			    // Canción más votada       
