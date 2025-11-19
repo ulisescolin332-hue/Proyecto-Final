@@ -20,9 +20,9 @@ int TotalCanciones  = 10;   			    // Número de canciones disponibles
 int VotosPorOyente  = 3;    			    // Cada oyente da 3 votos
 
 // Matriz y arreglos
-int VotosOyentes [100][3];    			  // Matriz [Oyente][Voto]
+int VotosOyentes [100][3];    			  	// Matriz [Oyente][Voto]
 int PuntosPorCancion [10];   			    // Arreglo con puntos de cada canción
-int PuntosPorOyente [100];    			  // Arreglo de puntos por cada oyente
+int PuntosPorOyente [100];    			  	// Arreglo de puntos por cada oyente
 
 // Función principal: Se llaman las 3 funciones correspondientes (cada función ya realiza lo necesario según su inciso)
 
@@ -48,7 +48,7 @@ void main ()
 void In1CapturadeVotos ()
 {
     int i = 0;						                      // Contador del número de oyentes
-    int v1 = 0, v2 = 0, v3 = 0;		              // Variables para almacenar los votos del oyente
+    int v1 = 0, v2 = 0, v3 = 0;		              		  // Variables para almacenar los votos del oyente
 
     printf("Concurso para determinar: LA MEJOR CANCION DEL MES\n\n");
     printf("Cada oyente votara 3 canciones, estan enlistadas del (0 al 9).\n");
@@ -60,26 +60,26 @@ void In1CapturadeVotos ()
 	  scanf("%d %d %d", &v1, &v2, &v3);									       // Se pide los votos del primer oyente, para que el While comience correctamente
 
 
-    while (v1 != -1 && i < LimiteOyentes)								     // Ciclo para capturar votos mientras no se ingrese -1 y no se exceda el límite
+    while (v1 != -1 && i < LimiteOyentes)								       // Ciclo para capturar votos mientras no se ingrese -1 y no se exceda el límite
     {
-        VotosOyentes[i][0] = v1;										         // Guardan los 3 votos del oyente actual 
+        VotosOyentes[i][0] = v1;										       // Guardan los 3 votos del oyente actual 
         VotosOyentes[i][1] = v2;
         VotosOyentes[i][2] = v3;
 
-        i = i + 1; 														               // Se incrementa el contador de oyentes
+        i = i + 1; 														       // Se incrementa el contador de oyentes
 
-        printf("  Oyente No. %d:  ", i);								     // Asigna el numero o lugar del siguiente oyente 					
+        printf("  Oyente No. %d:  ", i);								       // Asigna el numero o lugar del siguiente oyente 					
 		    scanf("%d %d %d", &v1, &v2, &v3);							       // Solicita votos del siguiente oyente 	
     }
 
-    OyenCapturados = i;													             // Se guarda cuántos oyentes participaron realmente
+    OyenCapturados = i;													       // Se guarda cuántos oyentes participaron realmente
 }									
 
 // Función del inciso 2 (cálculo de votos y lugares de la canción)
 
 void In2CalculodeVotos ()
 {
-    int i = 0;				              // Contador para recorrer oyentes
+    int i = 0;				                  // Contador para recorrer oyentes
 	  int c = 0;				              // Contador para recorrer canciones
 
 	  // Inicialización del arreglo de puntos: todas las canciones empiezan con 0
@@ -99,7 +99,7 @@ void In2CalculodeVotos ()
 
 	// Busqueda de la canción más votada	
     int max1 = -1;									
-    CancionNo1 = -1;		                                  // Primer lugar, se inicializan en -1 porque todas las canciones tienen 0 o más puntos y puede a haber un error si es en 0				
+    CancionNo1 = -1;		                                  			  // Primer lugar, se inicializan en -1 porque todas las canciones tienen 0 o más puntos y puede a haber un error si es en 0				
 	  
     for (c = 0; c < TotalCanciones; c++)								
     {
@@ -193,6 +193,6 @@ void In3ObtdeOyenGanyMostrarResultados ()
         printf("  Oyente %d: %d puntos\n", i, PuntosPorOyente[i]);
     }
     
-    printf("\nOyente ganador: \n");                                        // Muestra ganador final
+    printf("\nOyente ganador: \n");                                       // Muestra ganador final
     printf("  Fue el No. %d  con  %d  puntos\n", OyenGanador, PuntosPorOyente[OyenGanador]);
 }
