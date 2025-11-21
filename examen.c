@@ -1,4 +1,4 @@
-* Francisco Colín Ulises 
+/* Francisco Colín Ulises 
 Proyecto final, Exámen No. 2*/
 
 #include <stdio.h>
