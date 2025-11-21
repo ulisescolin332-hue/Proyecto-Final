@@ -56,7 +56,7 @@ void In1CapturadeVotos ()
     printf("Si desea terminar, escriba (-1) en la primera cancion a votar.\n\n");
 
 	  printf("Votos asignados por:  \n");
-    printf("  Oyente No. %d:  ", i);									       // Muestra el número del primer oyente  					
+      printf("  Oyente No. %d:  ", i);									       // Muestra el número del primer oyente  					
 	  scanf("%d %d %d", &v1, &v2, &v3);									       // Se pide los votos del primer oyente, para que el While comience correctamente
 
 
@@ -66,10 +66,10 @@ void In1CapturadeVotos ()
         VotosOyentes[i][1] = v2;
         VotosOyentes[i][2] = v3;
 
-        i = i + 1; 														       // Se incrementa el contador de oyentes
+        i++; 														           // Se incrementa el contador de oyentes
 
         printf("  Oyente No. %d:  ", i);								       // Asigna el numero o lugar del siguiente oyente 					
-		    scanf("%d %d %d", &v1, &v2, &v3);							       // Solicita votos del siguiente oyente 	
+		scanf("%d %d %d", &v1, &v2, &v3);							           // Solicita votos del siguiente oyente 	
     }
 
     OyenCapturados = i;													       // Se guarda cuántos oyentes participaron realmente
@@ -80,9 +80,9 @@ void In1CapturadeVotos ()
 void In2CalculodeVotos ()
 {
     int i = 0;				                  // Contador para recorrer oyentes
-	  int c = 0;				              // Contador para recorrer canciones
+	int c = 0;				                  // Contador para recorrer canciones
 
-	  // Inicialización del arreglo de puntos: todas las canciones empiezan con 0
+	// Inicialización del arreglo de puntos: todas las canciones empiezan con 0
     for (c = 0; c < TotalCanciones; c++)								
     {
         PuntosPorCancion[c] = 0;
@@ -90,7 +90,7 @@ void In2CalculodeVotos ()
 
     for (i = 0; i < OyenCapturados; i++)							     // Suma de votos según la posición del voto de cada oyente
     {
-    	  PuntosPorCancion[VotosOyentes[i][0]] = PuntosPorCancion[VotosOyentes[i][0]] + 3;				        // Primer lugar, más 3 votos
+    	PuntosPorCancion[VotosOyentes[i][0]] = PuntosPorCancion[VotosOyentes[i][0]] + 3;				        // Primer lugar, más 3 votos
 
         PuntosPorCancion[VotosOyentes[i][1]] = PuntosPorCancion[VotosOyentes[i][1]] + 2;				        // Segundo lugar, más 2 votos
 
