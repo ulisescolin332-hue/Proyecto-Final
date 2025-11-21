@@ -1,4 +1,4 @@
-/* Francisco Colín Ulises 
+* Francisco Colín Ulises 
 Proyecto final, Exámen No. 2*/
 
 #include <stdio.h>
@@ -55,9 +55,9 @@ void In1CapturadeVotos ()
     printf("Para separar un voto del otro, basta con dar un espacio entre estos.\n");
     printf("Si desea terminar, escriba (-1) en la primera cancion a votar.\n\n");
 
-	  printf("Votos asignados por:  \n");
-      printf("  Oyente No. %d:  ", i);									       // Muestra el número del primer oyente  					
-	  scanf("%d %d %d", &v1, &v2, &v3);									       // Se pide los votos del primer oyente, para que el While comience correctamente
+	printf("Votos asignados por:  \n");
+    printf("  Oyente No. %d:  ", i);									       // Muestra el número del primer oyente  					
+	scanf("%d %d %d", &v1, &v2, &v3);									       // Se pide los votos del primer oyente, para que el While comience correctamente
 
 
     while (v1 != -1 && i < LimiteOyentes)								       // Ciclo para capturar votos mientras no se ingrese -1 y no se exceda el límite
